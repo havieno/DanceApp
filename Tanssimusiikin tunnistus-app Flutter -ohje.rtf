@@ -1,0 +1,65 @@
+Tanssimusiikin tunnistus-app (Flutter)
+--------------------------------------
+käynnistysohje kehitysvaiheeseen windows-ympäristössä:
+a. siirry komentokehoitteeseen
+b. käynnistä komennolla: flutter run -d windows
+Huom! Jos käynnistät näillä komennoilla:
+flutter clean
+flutter pub get
+flutter run -d windows 
+niin seuraus on että flutter rakentaa projektin uudestaan,
+ja mm. puhelinlayoutit häviävät, siinä tapauksessa toimi näin:
+✔️ Miten saat puhelinlayoutin takaisin?
+Valitse yksi näistä tavoista:
+
+1) Aja Android‑emulaattorilla
+Koodi
+flutter run -d emulator-5554
+Tai valitse VS Coden/Android Studion device listasta Android‑emulaattori.
+
+2) Aja Chrome‑targetilla puhelinleveyteen rajattuna
+Chrome devtools → Device toolbar → valitse esim. Pixel 5.
+
+3) Rajoita Windows‑ikkunan kokoa (kehityskikka)
+Lisää main.dart alkuun:
+
+dart
+WidgetsFlutterBinding.ensureInitialized();
+await DesktopWindow.setWindowSize(const Size(390, 844)); // iPhone 12 koko
+Tämä pakottaa Windows‑ikkunan puhelimen kokoiseksi.
+
+4) Tee responsiivinen layout (paras pitkällä aikavälillä)
+Esimerkiksi:
+
+dart
+final width = MediaQuery.of(context).size.width;
+
+if (width < 600) {
+  return MobileLayout();
+} else {
+  return DesktopLayout();
+}
+🔍 Miksi tämä tapahtui juuri nyt?
+Koska:
+
+flutter clean poisti kaiken välimuistin
+
+flutter run -d windows käynnisti sovelluksen desktop‑targetilla
+
+desktop‑target ei käytä puhelimen layout‑rajoja
+
+Eli sovellus ei oikeasti muuttunut — alusta muuttui.
+
+Jos haluat, voin katsoa:
+miten layout kannattaa rakentaa responsiivisesti
+
+miten saat Windows‑targetin näyttämään aina puhelinlayoutin
+
+tai miksi juuri sinun projektissasi UI venyy tietyllä tavalla
+
+Kerro vain, mihin suuntaan haluat jatkaa.
+
+
+
+
+ 

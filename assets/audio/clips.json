@@ -1,0 +1,80 @@
+[
+  {
+    "id": "fusku_01",
+    "file": "fusku_01.mp3",
+    "style": "fusku",
+    "bpm": 150,
+    "difficulty": "easy"
+  },
+  {
+    "id": "bugg_01",
+    "file": "bugg_01.mp3",
+    "style": "bugg",
+    "bpm": 140,
+    "difficulty": "easy"
+  },
+  {
+    "id": "valssi_01",
+    "file": "valssi_01.mp3",
+    "style": "valssi",
+    "bpm": 65,
+    "difficulty": "easy"
+  },
+  {
+    "id": "valssi_02",
+    "file": "valssi_02.mp3",
+    "style": "hi-valssi",
+    "bpm": 80,
+    "difficulty": "easy"
+  },
+  {
+    "id": "tango_01",
+    "file": "tango_01.mp3",
+    "style": "tango",
+    "bpm": 120,
+    "difficulty": "medium"
+  },
+  {
+    "id": "rumba_01",
+    "file": "rumba_01.mp3",
+    "style": "rumba",
+    "bpm": 108,
+    "difficulty": "medium"
+  },
+  {
+    "id": "cha-cha_01",
+    "file": "cha-cha_01.mp3",
+    "style": "cha-cha",
+    "bpm": 140,
+    "difficulty": "medium"
+  },
+  {
+    "id": "jive_01",
+    "file": "jive_01.mp3",
+    "style": "jive",
+    "bpm": 170,
+    "difficulty": "medium"
+  },
+  {
+    "id": "salsa_01",
+    "file": "salsa_01.mp3",
+    "style": "salsa",
+    "bpm": 188,
+    "difficulty": "medium"
+  },
+
+  {
+    "id": "jenkka_01",
+    "file": "Jenkka_01.mp3",
+    "style": "jenkka",
+    "bpm": 140,
+    "difficulty": "medium"
+  },
+  {
+    "id": "polkka_01",
+    "file": "Polkka_01.mp3",
+    "style": "polkka",
+    "bpm": 140,
+    "difficulty": "medium"
+  }
+]
